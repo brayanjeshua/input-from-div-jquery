@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Auto Fill Div From input</title>
+</head>
+<body>
+
+<input type="text" id="myTextarea" placeholder="Type something here...">
+
+<div class="output"></div>
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.js" integrity="sha256-BTlTdQO9/fascB1drekrDVkaKd9PkwBymMlHOiG+qLI=" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+
+  $(document).ready(function(){
+      $("#myTextarea").keyup(function(){
+          // Getting the current value of textarea
+          var currentText = $(this).val();
+
+          // Setting the Div content
+          $(".output").text(currentText);
+      });
+  });
+
+</script>
+
+</body>
+</html>
